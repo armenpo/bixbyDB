@@ -1,7 +1,14 @@
-const express = require('express')
-const app = express()
-const port = 3000
+import express from "express";
+import bodyParser from "body-parser";
 
-app.get('/', (req, res) => res.send('Hello World!'))
+import globalRouter from "./routers/globalRouter";
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+const app = express();
+
+//[CONFIGURE APP TO USE bodyParser]
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.get("/", globalRouter);
+
+export default app;
