@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "To create bixby capsule",
   "main": "server.js",
-  "start": "json-server --watch db.json --port 4000",
+  "scripts":{
+    "start": "nodemon --exec babel-node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/armenpo/bixbyDB.git"
@@ -15,9 +17,13 @@
   },
   "homepage": "https://github.com/armenpo/bixbyDB#readme",
   "dependencies": {
+    "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/node": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
   }
 }
