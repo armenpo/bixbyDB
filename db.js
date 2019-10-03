@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-// import food from "./models/food";
+import Food from "./models/Food";
 import dotenv from "dotenv";
 
 dotenv.config();

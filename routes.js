@@ -1,9 +1,12 @@
 const HOME = "/";
-const GETFOOD = "get_food";
+
+const API = "/api";
+const GETFOOD = "/getfood";
 
 const routes = {
     home: HOME,
-    getfood: GETFOOD
+    api: API,
+    getfood: GETFOOD,
 }
 
 export default routes;
